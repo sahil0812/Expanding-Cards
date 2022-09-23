@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*if dimension of width or height is more, then it will fit first*/
+body{
+    display: block;
+    /*height: 100vh;*/
+    overflow: auto;/*overflow problem can occur when we use vh and vw*/
+    background-color: #e4cbbd;
+}
+/*always take the container div, set its width and height, make it flexbox, and use flex grow for size of child and set child height and width to 100% or any other according to our requirement and set margin and other things to childs*/
+.container{
+    width:85vw;
+    height: 85vh;
+    margin: 7.5vh auto;
+    display: flex;
+    overflow: hidden;
+}
+.common{
+    background-size: 100% 100%;/*width and height*/
+    background-position: center;
+    background-repeat:no-repeat;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;/*flex grow - A number specifying how much the item will grow relative to the rest of the flexible items(it will change width)*/
+    margin: 10px;
+    position: relative;/*we have to set position to absolute of h3, because we have to change position of h3 w.r.t. card, hence we set position of card relative*/
+    transition: flex 0.7s ease-in;
+}
+.common h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;/*To make it invisible, we will make it visible using js*/
+}
+.common.active{
+    flex:4;
+}
+.common.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+.card1{
+    background-image: url(https://images.unsplash.com/photo-1659813254494-fbf374803c7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60);
+
+}
+
+.card2{
+    background-image: url(https://images.unsplash.com/photo-1657052382004-f8c81aa4d253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw0MDE5MjJ8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60);
+
+}
+.card3{
+    background-image: url(https://images.unsplash.com/photo-1659605199215-83f8b3a8b5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+
+}
+.card4{
+    background-image: url(https://images.unsplash.com/photo-1632103996718-4a47cf68b75e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU3fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+
+}
+.card5{
+    background-image: url(https://images.unsplash.com/photo-1659067314889-d31af954afb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDg2fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+
+}
+
+.card6{
+    background-image: url(https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.card7{
+    background-image: url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHJpdmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+}
+
+.card8{
+    background-image: url(https://images.unsplash.com/photo-1504217051514-96afa06398be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHJpdmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+}
+.card9{
+    background-image: url(https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+.card10{
+    background-image: url(https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+}
+
+@media (max-width:1100px) {
+    .container{
+        width: 90vw;
+    }
+    .common:nth-of-type(4), .common:nth-of-type(5){
+        display: none;
+    }
+}
+
+@media (max-width:800px) {
+    .container{
+        width: 90vw;
+        height: 100vh;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .common:nth-of-type(4), .common:nth-of-type(5){
+        display: initial;
+    }
+}

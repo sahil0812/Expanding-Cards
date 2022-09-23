@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expanding Cards</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--set the size of container and set the images length using flex grow or give 100% length to elements-->
+        <div class="card1 common naya active">
+            <h3>Mount Shasta</h3>
+        </div>
+        <div class="card2 common naya">
+            <h3>Island</h3>
+        </div>
+        <div class="card3 common naya">
+            <h3>Creative</h3>
+        </div>
+        <div class="card4 common naya">
+            <h3>Plaster City</h3>
+        </div>
+        <div class="card5 common naya">
+            <h3>Manhatten Bridge</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card6 common all active">
+            <h3>Moena, Italy</h3>
+        </div>
+        <div class="card7 common all">
+            <h3>Yosemite Valley</h3>
+        </div>
+        <div class="card8 common all">
+            <h3>Gooaland, Iceland</h3>
+        </div>
+        <div class="card9 common all">
+            <h3>Los Angeles</h3>
+        </div>
+        <div class="card10 common all">
+            <h3>Tokyo, Japan</h3>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
+<!--make body element block and and center container using margin, and remove overflow  
+    set specific width and height to the elements such that they get oveflow
+    set container as flex wrap and remove flex-grow elements and change the value oof width and heigth in media query
+    don't set flex direction column, else it will wrap in row    -->
